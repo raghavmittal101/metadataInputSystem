@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Form</title>
+    <style>
+        input.dimen-inp{
+            width: 4em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Metadata form</h1>
+    <form method="POST">
+        <label>Path segment width</label>
+        <input class="dimen-inp" type="number" name="pathWidth"><br>
+        <label>Path segment length</label>
+        <input class="dimen-inp" type="number" name="pathSegmentLength"><br>
+        <label>Number of visible path segments</label>
+        <input type="number" name="visiblePathSegmentCount"><br>
+        <label>Ray array length</label>
+        <input class="dimen-inp" type="number" name="rayArrayLength"><br>
+        <label>Play area padding</label>
+        <input class="dimen-inp" type="number" step="0.01" name="playAreaPadding"><br>
+        
+        <!-- <label>Repeat images</label>
+        <input type="checkbox" name="repeatImages" value="true"><br>
+        <label>Image frame dimensions</label>
+        <input class="dimen-inp" type="number" name="frame_dimensions_x" step="0.01">
+        <input class="dimen-inp" type="number" name="frame_dimensions_z" step="0.01"><br> -->
+        <label>Image URIs separated by `;` </label><br>
+        <textarea name="imageURI"></textarea><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
