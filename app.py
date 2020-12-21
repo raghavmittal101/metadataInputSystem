@@ -17,16 +17,8 @@ DB_CLUSTERNAME = config["DB_CLUSTERNAME"]
 DB_URI = "mongodb+srv://"+DB_USER+":"+DB_PASSWORD+"@"+DB_CLUSTERNAME+".ovnng.mongodb.net/"+DB_NAME+"?retryWrites=true&w=majority"
 
 app.config["MONGO_URI"] = DB_URI
-# app.config["SECRET_KEY"] = config["WTF_SECRET_KEY"]
 
 mongo = PyMongo(app)
-
-# class LoginForm(FlaskForm):
-#     pathWidth = DecimalField('pathWidth')
-#     pathSegmentLength = DecimalField('segmentLength')
-#     imageUrls = StringField('imageUrls')
-
-
 
 # Function to validate URL 
 # using regular expression 
@@ -56,8 +48,6 @@ def isValidURL(str):
 
 @app.route('/')
 def form():
-    # form = LoginForm()
-    # return render_template("form.html", form=form)
     return render_template('form.html')
 
 @app.route('/', methods=['POST'])
@@ -87,11 +77,8 @@ def get_metadata():
         doc_id = int(request.args['id'])
     elif request.method == 'POST'or 'POST':
         doc_id = int(request.get_json()['id'])
-    # elif request.method == 'PUT':
-    #     # doc_id = int(request.json['id'])
-    #     print(request.get_json()['id'])
     data = mongo.db.config["METADATA_COLLNAME"].find_one(filter={'_id' : doc_id})
     return jsonify(data)
-    # return "done"
+
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
