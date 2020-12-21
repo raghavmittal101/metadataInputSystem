@@ -1,10 +1,18 @@
 from flask import Flask, render_template, request, jsonify
 from flask_pymongo import PyMongo
 import re
+import os
 # from flask_wtf import FlaskForm
 # from wtforms import StringField, DecimalField, BooleanField, SubmitField, FieldList
 
-from config import config
+# uncomment this to supply variables from `config.py` file
+# it will only work on local machine.
+# from config import config
+
+# use `heroku local` command to run the app
+# environment variables are supplied from `.env` file
+config = os.environ
+
 from flask_cors import CORS
 
 app = Flask(__name__)
