@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+        {% block content %}
+            <h2 class="mdl-card__title-text">
+                Metadata Form
+            </h2>
+            <form method="POST">
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input
+                    class="dimen-inp mdl-textfield__input"
+                    type="number"
+                    name="pathWidth"
+                    step="any"
+                    id="pathWidth"
+                  />
+                  <label class="mdl-textfield__label" for="pathWidth"
+                    >Path segment width</label
+                  >
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input
+                    class="dimen-inp mdl-textfield__input"
+                    type="number"
+                    name="pathSegmentLength"
+                    step="any"
+                    id="pathSegmentLength"
+                  />
+                  <label class="mdl-textfield__label" for="pathSegmentLength"
+                    >Path segment length</label
+                  >
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input
+                    type="number"
+                    name="visiblePathSegmentCount"
+                    id="visiblePathSegmentCount"
+                    class="mdl-textfield__input"
+                  />
+                  <label
+                    class="mdl-textfield__label"
+                    for="visiblePathSegmentCount"
+                    >Number of visible path segments</label
+                  >
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <label class="mdl-textfield__label" for="rayArrayLength"
+                    >Ray array length</label
+                  >
+                  <input
+                    class="dimen-inp mdl-textfield__input"
+                    type="number"
+                    name="rayArrayLength"
+                    id="rayArrayLength"
+                  />
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <label class="mdl-textfield__label" for="playAreaPadding"
+                    >Play area padding</label
+                  >
+                  <input
+                    class="dimen-inp mdl-textfield__input"
+                    type="number"
+                    step="any"
+                    name="playAreaPadding"
+                    id="playAreaPadding"
+                  />
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <textarea
+                    rows="6"
+                    name="imageURI"
+                    class="mdl-textfield__input"
+                    id="imageURI"
+                  ></textarea>
+                  <label class="mdl-textfield__label" for="imageURI"
+                    >Image URIs separated by `;`
+                  </label>
+                </div>
+                <!-- Accent-colored raised button with ripple -->
+                <br /><button
+                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                  type="submit"
+                >
+                  Get ID
+                </button>
+            </form>
+        {% endblock %}

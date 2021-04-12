@@ -56,7 +56,7 @@ def isValidURL(str):
 
 @app.route('/')
 def form():
-    return render_template('form.html')
+    return render_template('input.html')
 
 @app.route('/', methods=['POST'])
 def form_post():
@@ -77,7 +77,8 @@ def form_post():
     # insert document
     data = mongo.db.config["METADATA_COLLNAME"].insert_one(a)
     # print the ID of the inserted document
-    return "your ID is: " + str(data.inserted_id)
+    return render_template('output.html', doc_id=data.inserted_id)
+    # return "your ID is: " + str(data.inserted_id)
 
 @app.route('/metadata', methods=['GET', 'POST', 'PUT'])
 def get_metadata():

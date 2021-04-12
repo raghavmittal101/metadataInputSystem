@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hello!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!--  MDL    -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+    />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.red-pink.min.css"
+    />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <!--     <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+
+      </div>
+    </header> -->
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout-icon"></div>
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout__title"
+            >Limiltless Path Generation System</span
+          >
+          <div class="mdl-layout-spacer"></div>
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="#">Reference</a>
+            <a class="mdl-navigation__link" href="#">Source code</a>
+            <a class="mdl-navigation__link" href="#">Unity build</a>
+            <a class="mdl-navigation__link" href="#">WebXR implementation</a>
+            <a class="mdl-navigation__link" href="#">Abou authors</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+        <span class="mdl-layout__title">Limitless Path Generation System</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="#">Reference</a>
+          <a class="mdl-navigation__link" href="#">Source code</a>
+          <a class="mdl-navigation__link" href="#">Unity build</a>
+          <a class="mdl-navigation__link" href="#">WebXR implementation</a>
+          <a class="mdl-navigation__link" href="#">Abou authors</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+      
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--4-col">
+                     <h2 class="mdl-card__title-text">
+              What is Limitless Path Generation System?
+            </h2>
+          </div>
+          <div class="mdl-cell mdl-cell--4-col">
+
+            <h2 class="mdl-card__title-text">Instructions</h2>
+
+            This text might describe the photo and provide further information,
+            such as where and when it was taken.
+          <br/><br/>  
+            
+            {% block content %}
+            {% endblock %}
+          </div>
+          <div class="mdl-cell mdl-cell--4-col">
+                      <div class="mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__supporting-text">
+                <h4 class="mdl-card__title-text">WebXR implementation</h4>
+                This text might describe the photo and provide further
+                information, such as where and when it was taken.
+              </div>
+              <div class="mdl-card__actions">
+                <button
+                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                >
+                  Experience in Browser
+                </button>
+                <div class="mdl-card__actions">
+                  <button
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                  >
+                    Source code
+                  </button>
+                </div>
+              </div>
+            </div>
+          <div class="mdl-card mdl-shadow--2dp">
+              <!--               <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Experience in VR</h2>
+              </div> -->
+              <!-- Raised button with ripple -->
+
+              <div class="mdl-card__supporting-text">
+                <h4 class="mdl-card__title-text">Unity Build</h4>
+                This text might describe the photo and provide further
+                information, such as where and when it was taken.
+              </div>
+              <div class="mdl-card__actions">
+                <button
+                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                >
+                  Download APK for Oculus Quest
+                </button>
+                <div class="mdl-card__actions">
+                  <button
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                  >
+                    Source code
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+      </main>
+    </div>
+  </body>
+</html>
