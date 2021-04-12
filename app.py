@@ -56,7 +56,7 @@ def isValidURL(str):
 
 @app.route('/')
 def form():
-    return render_template('input.html')
+    return render_template('base.html')
 
 @app.route('/', methods=['POST'])
 def form_post():
