@@ -1,185 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Limitless Path Generation System For Locomotion in VR</title>
-
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-
-    <!--  MDL    -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
-    />
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.blue_grey-teal.min.css"
-    />
-
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout-icon"></div>
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout__title"
-            >Limitless Path Generation System For Locomotion in VR</span
-          >
-          <div class="mdl-layout-spacer"></div>
-          <nav class="mdl-navigation mdl-layout--large-screen-only">
-            <a class="mdl-navigation__link" href="#">Reference</a>
-            <a class="mdl-navigation__link" href="#">Source code</a>
-          </nav>
-        </div>
-      </header>
-      <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-        <span class="mdl-layout__title">Limitless Path Generation System</span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="#">Reference</a>
-          <a class="mdl-navigation__link" href="#">Source code</a>
-        </nav>
-      </div>
-      <main class="mdl-layout__content">
-      
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--4-col">
-                     <h2 class="mdl-card__title-text">
-              What is Limitless Path Generation System?
-            </h2>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Metadata input form - Limitless Path Generation System For Locomotion in VR</title>
+		<!-- import the webpage's stylesheet -->
+		<link rel="stylesheet" href="/style.css" />
+		<!--  MDL    -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-teal.min.css" />
+		<!-- import the webpage's javascript file -->
+		<script src="/script.js" defer></script>
+    <style>
+      body{
+        background-color: darkgrey;
+      }
+    </style>
+	</head>
+	<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			<main class="mdl-layout__content">
+				<div class="mdl-grid">
+          <!-- first cell -------- -->
+					<div class="mdl-cell mdl-cell--2-col"></div>
+          <!-- second cell -------- -->
+					<div class="mdl-cell mdl-cell--4-col" style="background-color: white; padding: 3em 3em 1em 3em;">
+						<h2 class="mdl-card__title-text"> Metadata Input Form </h2>
+						<form method="POST">
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="dimen-inp mdl-textfield__input" type="number" name="pathWidth" step="any" id="pathWidth" />
+								<label class="mdl-textfield__label" for="pathWidth">Path segment width</label>
+							</div><br/>
+							<div class="mdl-textfield mdl-js-textfield">
+								<input class="dimen-inp mdl-textfield__input" type="number" name="pathSegmentLength" step="any" id="pathSegmentLength" />
+								<label class="mdl-textfield__label" for="pathSegmentLength">Path segment length</label>
+							</div><br/>
+							<div class="mdl-textfield mdl-js-textfield">
+								<input type="number" name="visiblePathSegmentCount" id="visiblePathSegmentCount" class="mdl-textfield__input" />
+								<label class="mdl-textfield__label" for="visiblePathSegmentCount">Number of visible path segments</label>
+							</div><br/>
+							<div class="mdl-textfield mdl-js-textfield">
+								<label class="mdl-textfield__label" for="rayArrayLength">Ray array length</label>
+								<input class="dimen-inp mdl-textfield__input" type="number" name="rayArrayLength" id="rayArrayLength" />
+							</div><br/>
+							<div class="mdl-textfield mdl-js-textfield">
+								<label class="mdl-textfield__label" for="playAreaPadding">Play area padding</label>
+								<input class="dimen-inp mdl-textfield__input" type="number" step="any" name="playAreaPadding" id="playAreaPadding" />
+							</div><br/>
+							<div class="mdl-textfield mdl-js-textfield">
+								<textarea rows="6" name="imageURI" class="mdl-textfield__input" id="imageURI"></textarea>
+								<label class="mdl-textfield__label" for="imageURI">Image URIs separated by `;` </label>
+							</div><br/>
+							<!-- Accent-colored raised button with ripple -->
+							<br />
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit"> Get ID </button>
+						</form> {% block content %} {% endblock %} 
+            <br/><br/>
           </div>
-          <div class="mdl-cell mdl-cell--4-col">
-
-            <h2 class="mdl-card__title-text">Instructions</h2>
-            <!-- instructions will go here. -->
-
-          <br/><br/>  
           
-          <h2 class="mdl-card__title-text">
-            Metadata Form
-        </h2>
-        <form method="POST">
-            <div class="mdl-textfield mdl-js-textfield">
-              <input
-                class="dimen-inp mdl-textfield__input"
-                type="number"
-                name="pathWidth"
-                step="any"
-                id="pathWidth"
-              />
-              <label class="mdl-textfield__label" for="pathWidth"
-                >Path segment width</label
-              >
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-              <input
-                class="dimen-inp mdl-textfield__input"
-                type="number"
-                name="pathSegmentLength"
-                step="any"
-                id="pathSegmentLength"
-              />
-              <label class="mdl-textfield__label" for="pathSegmentLength"
-                >Path segment length</label
-              >
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-              <input
-                type="number"
-                name="visiblePathSegmentCount"
-                id="visiblePathSegmentCount"
-                class="mdl-textfield__input"
-              />
-              <label
-                class="mdl-textfield__label"
-                for="visiblePathSegmentCount"
-                >Number of visible path segments</label
-              >
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-              <label class="mdl-textfield__label" for="rayArrayLength"
-                >Ray array length</label
-              >
-              <input
-                class="dimen-inp mdl-textfield__input"
-                type="number"
-                name="rayArrayLength"
-                id="rayArrayLength"
-              />
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-              <label class="mdl-textfield__label" for="playAreaPadding"
-                >Play area padding</label
-              >
-              <input
-                class="dimen-inp mdl-textfield__input"
-                type="number"
-                step="any"
-                name="playAreaPadding"
-                id="playAreaPadding"
-              />
-            </div>
-            <div class="mdl-textfield mdl-js-textfield">
-              <textarea
-                rows="6"
-                name="imageURI"
-                class="mdl-textfield__input"
-                id="imageURI"
-              ></textarea>
-              <label class="mdl-textfield__label" for="imageURI"
-                >Image URIs separated by `;`
-              </label>
-            </div>
-            <!-- Accent-colored raised button with ripple -->
-            <br /><button
-              class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-              type="submit"
-            >
-              Get ID
-            </button>
-          </form>
-            {% block content %}
-            {% endblock %}
-          </div>
-          <div class="mdl-cell mdl-cell--4-col">
-          <div class="mdl-card mdl-shadow--2dp">
+			    <!-- third cell --------------- -->
+          <div class="mdl-cell mdl-cell--2-col">
+            <div class="mdl-card mdl-shadow--2dp">
               <div class="mdl-card__supporting-text">
-                <h4 class="mdl-card__title-text">Unity Package</h4>
-                This text might describe the photo and provide further
-                information, such as where and when it was taken.
+                <h3 class="mdl-card__title-text" style="font-size: 2rem; color: black;"> Limitless Path Generation System For Locomotion in VR </h3>
+              <br>
+                Download
+                <a target="_blank" class="mdl-card__title-text" href="#" style="color: navy;">app for Oculus Quest/ Quest 2</a><br>
+                <a target="_blank" class="mdl-card__title-text" href="#" style="color: navy;">source code</a><br/><br/>
+                Reference
+                <a target="_blank" class="mdl-card__title-text" href="#" style="color: navy;">HCII 2021 paper</a>
               </div>
-              <div class="mdl-card__actions">
-                <button
-                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
-                >
-                  Download pre-built APK for Oculus Quest
-                </button>
-                <div class="mdl-card__actions">
-                  <button
-                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
-                  >
-                    Download Unity Package
-                  </button>
+              <!-- #<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> </button><br><br> -->
+                <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"> Download Unity Package </button> -->
+                <div class="mdl-card__supporting-text">
+                  Developed at 
+                  <span class="mdl-card__title-text">Software Engineering Research Center</span> 
+                  <span class="mdl-card__title-text" style="font-size: 1.4rem;">International Institute of Information Technology Hyderabad, India</span>
+                  <a target="_blank" style="color: navy;" href=https://www.iiit.ac.in>www.iiit.ac.in</a>
+                  <br/><br/>
+                  <b>To know more about us or work with us, write us at:</b> <br>
+                  Dr Y. Raghu Reddy (Associate Prof., IIIT-H):<br><a href="mailto:raghu.reddy@iiit.ac.in" style="color: rgb(76, 76, 124);">raghu.reddy@iiit.ac.in</a><br/>
+                  Sai Aniruddh Karri (PhD scholar at SERC):<br> <a href="mailto:saianirudh.karri@research.iiit.ac.in" style="color: rgb(76, 76, 124);">saianirudh.karri@research.iiit.ac.in</a><br>
+                  Raghav Mittal (Research student at SERC):<br> <a href="mailto:raghav.mittal@research.iiit.ac.in" style="color: rgb(76, 76, 124);">raghav.mittal@research.iiit.ac.in</a> 
                 </div>
-              </div>
+              
             </div>
+            <br/>
           </div>
-          
-        </div>
 
+          <!-- forth cell --------------- -->
+          <div class="mdl-cell mdl-cell--2-col"></div>
+        </div>
       </main>
     </div>
-  </body>
+</body>
 </html>
