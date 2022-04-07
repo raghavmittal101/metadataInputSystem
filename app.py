@@ -73,7 +73,7 @@ def form_post():
     a["imageURI"] = image_list
     # generate custom ID for document
     id  = mongo.db.config["METADATA_COLLNAME"].count_documents(filter={}) + 1
-    id_str = mongo.db.config["METADATA_COLLNAME"].find().sort({_id:-1}).limit(1)
+    id_str = mongo.db.config["METADATA_COLLNAME"].find().sort({'_id':-1}).limit(1)
     a["_id"] = id
     print("ID string is", id_str)
     # insert document
