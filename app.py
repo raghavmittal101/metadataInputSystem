@@ -74,7 +74,7 @@ def form_post():
     # generate custom ID for document
     id  = mongo.db.config["METADATA_COLLNAME"].count_documents(filter={}) + 1
     a["_id"] = id
-    print("id is: " + id)
+    print("your ID is", id)
     # insert document
     data = mongo.db.config["METADATA_COLLNAME"].insert_one(a)
     # print the ID of the inserted document
