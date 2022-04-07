@@ -75,7 +75,7 @@ def form_post():
     id  = mongo.db.config["METADATA_COLLNAME"].count_documents(filter={}) + 1
     id_str = mongo.db.config["METADATA_COLLNAME"].find().sort({'_id':-1}).limit(1)
     a["_id"] = id
-    print("ID string is", id_str)
+    print(id_str)
     # insert document
     data = mongo.db.config["METADATA_COLLNAME"].insert_one(a)
     # print the ID of the inserted document
