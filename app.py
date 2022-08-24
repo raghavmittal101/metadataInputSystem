@@ -69,11 +69,19 @@ def form_post():
     for image in images:
         if(isValidURL(image.strip())):
             image_list.append(image.strip())
+	
     # replace imageURI string with image_list in input dictionary
     a["imageURI"] = image_list
+	
     # generate custom ID for document
     id  = mongo.db.config["METADATA_COLLNAME"].count_documents(filter={}) + 1
     a["_id"] = id
+
+    # hard coded some attributes to reduce data entry effort by user
+    a["visiblePathSegmentCount"] = 3;
+    a["rayArrayLength"] = 5;
+    a["playAreaPadding"] = 0.3;
+    
     # insert document
     data = mongo.db.config["METADATA_COLLNAME"].insert_one(a)
     # print the ID of the inserted document
